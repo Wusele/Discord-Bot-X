@@ -21,7 +21,7 @@
                </effect>
             </Label>
             <AnchorPane layoutX="56.0" layoutY="72.0" prefHeight="11.0" prefWidth="218.0" style="-fx-background-color: #00ff09;" />
-            <PasswordField fx:id="tokenField" alignment="CENTER" layoutX="37.0" layoutY="178.0" onKeyPressed="#onButtonPressed" prefHeight="25.0" prefWidth="256.0" promptText="Your Bot Token" style="-fx-background-color: #242221; -fx-background-radius: 90;" text="NzQwNjE1Mzg5MTI5NjA1MTMx.Xyrl1A.cjlCgqA8S6N9M0mLZuWhaJI24L8">
+            <PasswordField fx:id="tokenField" alignment="CENTER" layoutX="37.0" layoutY="178.0" onKeyPressed="#onButtonPressed" prefHeight="25.0" prefWidth="256.0" promptText="Your Bot Token" style="-fx-background-color: #242221; -fx-background-radius: 90;">
                <effect>
                   <Glow />
                </effect>
