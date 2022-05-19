@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1150.0" style="-fx-background-color: #25282b;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.wusel.testing.controllers.DashboardController">
+   <Pane fx:id="consolePane" disable="true" layoutX="189.0" layoutY="-1.0" prefHeight="650.0" prefWidth="962.0" visible="false" />
+   <Pane fx:id="audioPane" layoutX="199.0" prefHeight="650.0" prefWidth="951.0">
+      <children>
+         <ChoiceBox fx:id="serverChoice" layoutX="401.0" layoutY="226.0" onAction="#serverInputSet" prefWidth="150.0" style="-fx-background-color: #25282b;">
+            <effect>
+               <Glow level="1.0" />
+            </effect>
+         </ChoiceBox>
+         <Label layoutX="445.0" layoutY="194.0" text="Server" textFill="RED">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Label>
+         <ChoiceBox fx:id="channelChoice" layoutX="401.0" layoutY="335.0" prefWidth="150.0" style="-fx-background-color: #25282b;">
+            <effect>
+               <Glow level="1.0" />
+            </effect>
+         </ChoiceBox>
+         <Label layoutX="436.0" layoutY="293.0" text="Channel" textFill="RED">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Label>
+         <TextField fx:id="linkField" layoutX="384.0" layoutY="451.0" promptText="Youtube Link" style="-fx-background-color: #25282b;">
+            <font>
+               <Font name="Ebrima Bold" size="14.0" />
+            </font>
+            <effect>
+               <Glow level="0.58" />
+            </effect>
+         </TextField>
+         <Button fx:id="playButton" alignment="CENTER" layoutX="357.0" layoutY="514.0" mnemonicParsing="false" onAction="#playButtonPressed" prefHeight="49.0" prefWidth="236.0" style="-fx-background-color: #875bd5;" text="Play">
+            <effect>
+               <InnerShadow />
+            </effect></Button>
+         <Button fx:id="interfaceButton" alignment="CENTER" disable="true" layoutX="410.0" layoutY="579.0" mnemonicParsing="false" onAction="#interfaceButtonPressed" prefHeight="32.0" prefWidth="130.0" style="-fx-background-color: RED;" text="Open Interface" visible="false">
+            <effect>
+               <InnerShadow />
+            </effect>
+         </Button>
+      </children></Pane>
+   <Pane fx:id="homePane" disable="true" layoutX="199.0" prefHeight="650.0" prefWidth="951.0" visible="false">
+      <children>
+         <Label alignment="CENTER" prefHeight="77.0" prefWidth="130.0" text="Home" textFill="RED">
+            <font>
+               <Font size="35.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
+   <VBox prefHeight="650.0" prefWidth="199.0" style="-fx-background-color: #232629;">
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="170.0" prefWidth="201.0" text="DiscordBotX" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonPressed" prefHeight="77.0" prefWidth="199.0" style="-fx-background-color: transparent;" text="Home" textFill="#00ff99">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="audioButton" layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#audioButtonPressed" prefHeight="77.0" prefWidth="199.0" style="-fx-background-color: transparent;" text="Audio" textFill="#00ff99">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="consoleButton" layoutX="10.0" layoutY="257.0" mnemonicParsing="false" onAction="#consoleButtonPressed" prefHeight="77.0" prefWidth="199.0" style="-fx-background-color: transparent;" text="Console" textFill="#00ff99">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Button>
+   </VBox>
+   <Pane fx:id="audioInterfacePane" disable="true" layoutX="199.0" layoutY="9.0" prefHeight="650.0" prefWidth="962.0" visible="false">
+      <children>
+         <Label layoutX="393.0" layoutY="27.0" text="Audio Interface" textFill="RED">
+            <font>
+               <Font size="26.0" />
+            </font>
+         </Label>
+         <Label fx:id="currentlyPlayingLabel" layoutX="325.0" layoutY="159.0" prefHeight="49.0" prefWidth="137.0" text="Currently Playing: " textFill="#00ff48">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+      </children></Pane>
+</Pane>
